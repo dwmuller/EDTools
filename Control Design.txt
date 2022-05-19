@@ -1,0 +1,108 @@
+
+Game bindings <- Profile s/w <- Controller h/w
+
+In this particular case, the game is Elite: Dangerous, the programmable controller
+software is that provided by Logitech (rebranded Saitek editor), and the controller
+hardware is the Logitech X56 HOTAS.
+
+
+The game uses "bindings" that can be named and saved. 
+
+The controller software supports profiles that can be named and saved.
+
+Customization can occur either in profiles or bindings, but in practice
+you may want to use both.
+
+* Elite: Dangerous Bindings
+
+Bindings associate actions in the game with controller inputs, or several
+simultaneous controller inputs. They also associate continuous axis data from
+the controllers with particular continuous game actions. 
+
+Axis assignments will have to be done by bindings, not profiles, because 
+in most cases you to tell the game that you have additiona control axes available. 
+Predefined profiles can be used, but may not suit your preferences. Opportunies 
+for response curve and deadzone modifications are minimal and should be done with the
+controller software.
+
+The game has several input "modes" in which some actions are available and 
+others are not. These are not clearly characterized anywhere, but they
+include flight, general UI, headlook, and galaxy map modes.
+
+Shift button can be defined by simply associating an action with multiple
+simultaneous button presses, usually using one of those buttons consistently 
+as a shift button in multiple actions.
+
+Because of the API that ED uses, it can only directly recognize up to 32 buttons
+per controller. The X56 throttle has 33 (of course).
+
+* Logitech X56 Profiles
+
+The profile editor is fairly sophisticated. Any button can either be passed through, or
+or can be programmed to result in one or more keyboard output events. Multiple-event chains
+are called macros. Buttons can be programmed to run separate macros on press, on hold 
+(repeating), and on release.
+
+Macros cannot invoke other macros, or emulate other button presses. They can send keystrokes and
+emulate mouse actions (not movement), with arbitrary timing between events.
+
+Three shiftstates (modes) can be used, driven by the MODE dial on the throttle. Earlier
+versions of the software supported additional shiftstates, but this feature was removed.
+Each mode can also run a macro when entered (pressed) and when exited (released).
+
+A mode can optionally inherit definitions from another mode.
+
+The responses of all the axes (2 throttle, 3 joystick, 2 rotaries) can be shaped, but not
+of the two mouse sticks (throttle and joystick).
+
+
+* Joystick Gremlin
+
+This is a sophisticated alternative to the native profile software. It requires the vJoy
+virtual device driver, whose inputs drive JG's outputs. Inputs can be programmed to trigger 
+a wide variety of actions, including emitting keyboard keys and controller inputs, playing 
+sounds or speech, switching between arbitrary modes. Actions can be triggered by long presses,
+multiple inputs (providing one way of implementing shift keys), double-taps. Axes can be mapped
+and shaped, or turned into virtual buttons. Etc.
+
+The outputs of JG can be presented as one or more virtual controllers, providing a method of 
+getting around the 32-button limit. 
+
+The downside is that it becomes another dependency in your setup, running instead of the stock 
+profile software, and it requires vJoy, which a device driver. When programming bindings, some 
+games (including ED) insist on taking inputs from the hardware controller *and* the
+virtual controllers, requiring some shenanigans to work around. (See JG's "input repeater"
+feature, or additional s/w that can hide the physical controllers from programs.)
+
+All in all, the additional features are appealing but not worth the additional complexity and
+fragility to me. I reserve the right to change my mind ...
+
+* Strategy
+
+Start with a predefined binding in ED which has most actions mapped to keyboard events. Add
+explicit axis bindings wherever wanted. Use EDRefCard to get a reference. Deadzones for mouse
+sticks have to be set in ED.
+
+It's generally going to be easier to map controller inputs in ED, rather than setting keypresses
+in the profile. It is mandatory when defining shift buttons.
+
+Use the stock profile software to define any macro-like, multiple-action controls, or for the mode
+switches. Also to shape axes and dead zones for the major axes. 
+
+Throttle button 33 (SLD slider) will have to be profiled to a keypress if needed.
+
+For unmapped actions that need to be invoked by macros, assign unused keys.
+
+Use a PowerShell script to backup both bindings and profiles.
+
+TODO:
+- Wingmen
+
+
+
+* Pros/Cons of mapping mechanisms
+
+			binding	profile
+ease			   1
+document (EDRefCard)	   1
+shift keys		   1

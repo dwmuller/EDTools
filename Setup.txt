@@ -1,0 +1,25 @@
+
+* Flight checklist
+
+- Load Elite_Dangerous profile in X56.
+- Start ED either from Library or from SteamVR.
+- Verify The Miller Kbd Base bindings loaded in ED.
+- Start VoiceAttack via desktop Steam. (Hard to locate via SteamVR.)
+- Resume!
+
+
+* Software
+
+- Logitech X56 Profiler
+- Voice Attack (standalone version, registered)
+- EDDI (as a Voice Attack plugin)
+
+* Services
+
+- EDDN
+- EDSM - uses Frontier (ED developer) credentials
+
+* Quirks
+
+If you start VoiceAttack before SteamVR, VA correctly sees the change of input device, but audio doesn't
+get to it anyway. (Note: Changed exclusive setting on virtual input device, try again?)

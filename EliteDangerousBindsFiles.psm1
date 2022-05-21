@@ -12,16 +12,19 @@
 # - Relevant X56 profile files are assumed to match the pattern "Elite_Dangerous*.pr0".
 # - VoiceAttack keeps all its data in a single file.
 
-$ED_Bindings = "$env:LOCALAPPDATA\Frontier Developments\Elite Dangerous\Options\Bindings\"
-$ED_Backups = "$(Split-Path $MyInvocation.MyCommand.Path)\EDBackups\"
-$X56_Profiles = "$env:PUBLIC\Documents\Logitech\X56\"
-$VA_Data = "$env:APPDATA\VoiceAttack\"
+$ED_Bindings = "$env:LOCALAPPDATA\Frontier Developments\Elite Dangerous\Options\Bindings"
+$ED_Backups = "$(Split-Path $MyInvocation.MyCommand.Path)\EDBackups"
+$X56_Profiles = "$env:PUBLIC\Documents\Logitech\X56"
+$VA_Data = "$env:APPDATA\VoiceAttack"
 $RC_Opts = "/NJH","/NJS", "/NP"
 function Backup-EDBindsFiles ()
 {
     RoboCopy "$ED_Bindings" "$ED_Backups" "*.binds" @RC_Opts
     RoboCopy "$X56_Profiles" "$ED_Backups" "Elite_Dangerous*.pr0"  @RC_Opts
     RoboCopy "$VA_Data" "$ED_Backups" "VoiceAttack.dat"  @RC_Opts
+    # Maybe git add? Just show status for now:
+    git status
+    read-host -Prompt "Press any key to continue."
 }
 
 function Restore-EDBindsFiles ()
@@ -29,6 +32,7 @@ function Restore-EDBindsFiles ()
     Copy-Item "$ED_Backups\VoiceAttack.dat" -Destination $VA_DATA
     Get-ChildItem $ED_Backups -Filter "Elite_Dangerous*.pr0" | Copy-Item -Destination $X56_Profiles
     Get-ChildItem $ED_Backups -Filter "*.binds" | Copy-Item -Destination $ED_Bindings 
+    read-host -Prompt "Press any key to continue."
 }
 
 # TODO:

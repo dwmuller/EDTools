@@ -374,7 +374,10 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</CyclePreviousSubsystem>
 	<TargetNextRouteSystem>
-		<Primary Device="{NoDevice}" Key="" />
+		<Primary Device="Keyboard" Key="Key_N">
+			<Modifier Device="Keyboard" Key="Key_LeftControl" />
+			<Modifier Device="Keyboard" Key="Key_LeftAlt" />
+		</Primary>
 		<Secondary Device="SaitekX56Joystick" Key="Joy_POV1Up">
 			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
 		</Secondary>

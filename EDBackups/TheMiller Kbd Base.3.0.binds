@@ -13,7 +13,7 @@
 	<MouseDecayRate Value="4.00000000" />
 	<MouseDeadzone Value="0.05000000" />
 	<MouseLinearity Value="1.00000000" />
-	<MouseGUI Value="0" />
+	<MouseGUI Value="1" />
 	<YawAxisRaw>
 		<Binding Device="SaitekX56Joystick" Key="Joy_RZAxis" />
 		<Inverted Value="0" />
@@ -486,7 +486,7 @@
 	</ChargeECM>
 	<EnableRumbleTrigger Value="1" />
 	<EnableMenuGroups Value="0" />
-	<MouseGUI Value="0" />
+	<MouseGUI Value="1" />
 	<WeaponColourToggle>
 		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="{NoDevice}" Key="" />

@@ -508,11 +508,15 @@
 	<UIFocusMode Value="Bindings_FocusModeHold" />
 	<FocusLeftPanel>
 		<Primary Device="Keyboard" Key="Key_1" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_14">
+			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
+		</Secondary>
 	</FocusLeftPanel>
 	<FocusCommsPanel>
 		<Primary Device="Keyboard" Key="Key_2" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_11">
+			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
+		</Secondary>
 	</FocusCommsPanel>
 	<FocusOnTextEntryField Value="0" />
 	<QuickCommsPanel>
@@ -521,11 +525,15 @@
 	</QuickCommsPanel>
 	<FocusRadarPanel>
 		<Primary Device="Keyboard" Key="Key_3" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_13">
+			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
+		</Secondary>
 	</FocusRadarPanel>
 	<FocusRightPanel>
 		<Primary Device="Keyboard" Key="Key_4" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_12">
+			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
+		</Secondary>
 	</FocusRightPanel>
 	<LeftPanelFocusOptions Value="FocusOption_Nothing" />
 	<CommsPanelFocusOptions Value="FocusOption_Nothing" />
@@ -1354,8 +1362,8 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</GalnetAudio_ClearQueue>
 	<ExplorationFSSCameraPitch>
-		<Binding Device="SaitekX56Joystick" Key="Joy_YAxis" />
-		<Inverted Value="0" />
+		<Binding Device="SaitekX56Joystick" Key="Joy_RYAxis" />
+		<Inverted Value="1" />
 		<Deadzone Value="0.00000000" />
 	</ExplorationFSSCameraPitch>
 	<ExplorationFSSCameraPitchIncreaseButton>
@@ -1367,7 +1375,7 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</ExplorationFSSCameraPitchDecreaseButton>
 	<ExplorationFSSCameraYaw>
-		<Binding Device="SaitekX56Joystick" Key="Joy_RZAxis" />
+		<Binding Device="SaitekX56Joystick" Key="Joy_RXAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</ExplorationFSSCameraYaw>
@@ -1396,7 +1404,7 @@
 		<Secondary Device="SaitekX56Joystick" Key="Joy_13" />
 	</ExplorationFSSMiniZoomOut>
 	<ExplorationFSSRadioTuningX_Raw>
-		<Binding Device="{NoDevice}" Key="" />
+		<Binding Device="SaitekX56Throttle" Key="Joy_ZAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</ExplorationFSSRadioTuningX_Raw>

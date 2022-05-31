@@ -18,22 +18,37 @@ $ED_Backups = "$MyPath\EDBackups"
 $X56_Profiles = "$env:PUBLIC\Documents\Logitech\X56"
 $VA_Data = "$env:APPDATA\VoiceAttack"
 $RC_Opts = "/NJH","/NJS", "/NP"
-function Backup-EDBindsFiles ()
-{
+
+function Read-Pause () {
+    Read-Host -Prompt "Press any key to continue, Ctl-C to terminate"
+}
+
+function Read-YesNo($p) {
+    while ($True) {
+        $yn = Read-Host -Prompt "$p (y/n)"
+        if ($yn -eq "y") {
+            return $true
+        }
+        if ($yn -eq "n") {
+            return $false
+        }
+        Write-Host 'Please answer with a "y" or "n".'
+    }
+}
+
+function Backup-EDBindsFiles () {
     Set-Location $MyPath
     git status $ED_Backups
-    Read-Host -Prompt "Press any key to continue, Ctl-C to terminate"
+    Read-Pause
     RoboCopy "$ED_Bindings" "$ED_Backups" "*.binds" @RC_Opts
     RoboCopy "$X56_Profiles" "$ED_Backups" "Elite_Dangerous*.pr0"  @RC_Opts
     RoboCopy "$VA_Data" "$ED_Backups" "VoiceAttack.dat"  @RC_Opts
-    $yn = Read-Host -Prompt "Commit backup changes now? (y/n)"
-    if ($yn -eq "y") {
+    if (Read-YesNo "Commit backup changes now?") {
         git add "$ED_Backups\*"
         git commit "$ED_Backups"
-        read-host -Prompt "Press any key to continue"
-        $yn = Read-Host -Prompt "Push now? (y/n)"
-        if ($yn -eq "y") {
+        if (Read-YesNo "Push now?") {
             git push
+            Read-Pause
         }
     }
 }

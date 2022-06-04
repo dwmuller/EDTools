@@ -13,11 +13,11 @@
 	<MouseDecayRate Value="4.00000000" />
 	<MouseDeadzone Value="0.05000000" />
 	<MouseLinearity Value="1.00000000" />
-	<MouseGUI Value="1" />
+	<MouseGUI Value="0" />
 	<YawAxisRaw>
 		<Binding Device="SaitekX56Joystick" Key="Joy_RZAxis" />
 		<Inverted Value="0" />
-		<Deadzone Value="0.00000000" />
+		<Deadzone Value="0.04262500" />
 	</YawAxisRaw>
 	<YawLeftButton>
 		<Primary Device="Keyboard" Key="Key_A" />
@@ -486,7 +486,7 @@
 	</ChargeECM>
 	<EnableRumbleTrigger Value="1" />
 	<EnableMenuGroups Value="0" />
-	<MouseGUI Value="1" />
+	<MouseGUI Value="0" />
 	<WeaponColourToggle>
 		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="{NoDevice}" Key="" />
@@ -748,11 +748,11 @@
 	</CamZoomAxis>
 	<CamZoomIn>
 		<Primary Device="Keyboard" Key="Key_Z" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_25" />
 	</CamZoomIn>
 	<CamZoomOut>
 		<Primary Device="Keyboard" Key="Key_X" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_27" />
 	</CamZoomOut>
 	<CamTranslateZHold>
 		<Primary Device="{NoDevice}" Key="" />
@@ -829,7 +829,7 @@
 	</BuggySecondaryFireButton>
 	<AutoBreakBuggyButton>
 		<Primary Device="Keyboard" Key="Key_X" />
-		<Secondary Device="SaitekX56Throttle" Key="Joy_1" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_4" />
 		<ToggleOn Value="0" />
 	</AutoBreakBuggyButton>
 	<HeadlightsBuggyButton>
@@ -857,7 +857,7 @@
 	<MouseTurretYMode Value="Bindings_MousePitchInverted" />
 	<MouseTurretYDecay Value="1" />
 	<BuggyTurretYawAxisRaw>
-		<Binding Device="{NoDevice}" Key="" />
+		<Binding Device="SaitekX56Joystick" Key="Joy_RZAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</BuggyTurretYawAxisRaw>
@@ -870,7 +870,7 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</BuggyTurretYawRightButton>
 	<BuggyTurretPitchAxisRaw>
-		<Binding Device="{NoDevice}" Key="" />
+		<Binding Device="SaitekX56Joystick" Key="Joy_YAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</BuggyTurretPitchAxisRaw>
@@ -890,11 +890,11 @@
 		<Inverted Value="1" />
 		<Deadzone Value="0.17050000" />
 	</DriveSpeedAxis>
-	<BuggyThrottleRange Value="" />
+	<BuggyThrottleRange Value="Bindings_BuggyThrottleForewardOnly" />
 	<BuggyToggleReverseThrottleInput>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
-		<ToggleOn Value="1" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_1" />
+		<ToggleOn Value="0" />
 	</BuggyToggleReverseThrottleInput>
 	<BuggyThrottleIncrement Value="0.00000000" />
 	<IncreaseSpeedButtonMax>
@@ -950,11 +950,15 @@
 	</UIFocus_Buggy>
 	<FocusLeftPanel_Buggy>
 		<Primary Device="Keyboard" Key="Key_1" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_14">
+			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
+		</Secondary>
 	</FocusLeftPanel_Buggy>
 	<FocusCommsPanel_Buggy>
 		<Primary Device="Keyboard" Key="Key_2" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_11">
+			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
+		</Secondary>
 	</FocusCommsPanel_Buggy>
 	<QuickCommsPanel_Buggy>
 		<Primary Device="Keyboard" Key="Key_Enter" />
@@ -962,11 +966,15 @@
 	</QuickCommsPanel_Buggy>
 	<FocusRadarPanel_Buggy>
 		<Primary Device="Keyboard" Key="Key_3" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_13">
+			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
+		</Secondary>
 	</FocusRadarPanel_Buggy>
 	<FocusRightPanel_Buggy>
 		<Primary Device="Keyboard" Key="Key_4" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_12">
+			<Modifier Device="SaitekX56Throttle" Key="Joy_5" />
+		</Secondary>
 	</FocusRightPanel_Buggy>
 	<GalaxyMapOpen_Buggy>
 		<Primary Device="{NoDevice}" Key="" />
@@ -1417,9 +1425,9 @@
 		<Secondary Device="Keyboard" Key="Key_LeftBracket" />
 	</ExplorationFSSRadioTuningX_Decrease>
 	<ExplorationFSSRadioTuningAbsoluteX>
-		<Binding Device="SaitekX56Throttle" Key="Joy_UAxis" />
+		<Binding Device="SaitekX56Throttle" Key="Joy_RZAxis" />
 		<Inverted Value="0" />
-		<Deadzone Value="0.00000000" />
+		<Deadzone Value="0.04262500" />
 	</ExplorationFSSRadioTuningAbsoluteX>
 	<FSSTuningSensitivity Value="1.00000000" />
 	<ExplorationFSSDiscoveryScan>
@@ -1447,12 +1455,12 @@
 	</ExplorationFSSShowHelp>
 	<ExplorationSAAChangeScannedAreaViewToggle>
 		<Primary Device="Mouse" Key="Mouse_3" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_2" />
 		<ToggleOn Value="1" />
 	</ExplorationSAAChangeScannedAreaViewToggle>
 	<ExplorationSAAExitThirdPerson>
 		<Primary Device="Keyboard" Key="Key_Backspace" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_7" />
 	</ExplorationSAAExitThirdPerson>
 	<SAAThirdPersonMouseXMode Value="" />
 	<SAAThirdPersonMouseXDecay Value="0" />
@@ -1460,42 +1468,42 @@
 	<SAAThirdPersonMouseYDecay Value="0" />
 	<SAAThirdPersonMouseSensitivity Value="30.00000000" />
 	<SAAThirdPersonYawAxisRaw>
-		<Binding Device="{NoDevice}" Key="" />
+		<Binding Device="SaitekX56Joystick" Key="Joy_RXAxis" />
 		<Inverted Value="0" />
-		<Deadzone Value="0.00000000" />
+		<Deadzone Value="0.02662500" />
 	</SAAThirdPersonYawAxisRaw>
 	<SAAThirdPersonYawLeftButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_14" />
 	</SAAThirdPersonYawLeftButton>
 	<SAAThirdPersonYawRightButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_12" />
 	</SAAThirdPersonYawRightButton>
 	<SAAThirdPersonPitchAxisRaw>
-		<Binding Device="{NoDevice}" Key="" />
-		<Inverted Value="0" />
-		<Deadzone Value="0.00000000" />
+		<Binding Device="SaitekX56Joystick" Key="Joy_RYAxis" />
+		<Inverted Value="1" />
+		<Deadzone Value="0.02137500" />
 	</SAAThirdPersonPitchAxisRaw>
 	<SAAThirdPersonPitchUpButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_11" />
 	</SAAThirdPersonPitchUpButton>
 	<SAAThirdPersonPitchDownButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_13" />
 	</SAAThirdPersonPitchDownButton>
 	<SAAThirdPersonFovAxisRaw>
-		<Binding Device="{NoDevice}" Key="" />
+		<Binding Device="SaitekX56Throttle" Key="Joy_RXAxis" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</SAAThirdPersonFovAxisRaw>
 	<SAAThirdPersonFovOutButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_25" />
 	</SAAThirdPersonFovOutButton>
 	<SAAThirdPersonFovInButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_24" />
 	</SAAThirdPersonFovInButton>
 </Root>

@@ -13,7 +13,7 @@
 	<MouseDecayRate Value="4.00000000" />
 	<MouseDeadzone Value="0.05000000" />
 	<MouseLinearity Value="1.00000000" />
-	<MouseGUI Value="0" />
+	<MouseGUI Value="1" />
 	<YawAxisRaw>
 		<Binding Device="SaitekX56Joystick" Key="Joy_RZAxis" />
 		<Inverted Value="0" />
@@ -62,30 +62,30 @@
 		<Secondary Device="{NoDevice}" Key="" />
 	</PitchDownButton>
 	<LateralThrustRaw>
-		<Binding Device="SaitekX56Throttle" Key="Joy_RXAxis" />
+		<Binding Device="{NoDevice}" Key="" />
 		<Inverted Value="0" />
-		<Deadzone Value="0.20250000" />
+		<Deadzone Value="0.00000000" />
 	</LateralThrustRaw>
 	<LeftThrustButton>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_23" />
 	</LeftThrustButton>
 	<RightThrustButton>
 		<Primary Device="Keyboard" Key="Key_E" />
-		<Secondary Device="{NoDevice}" Key="" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_21" />
 	</RightThrustButton>
 	<VerticalThrustRaw>
-		<Binding Device="SaitekX56Throttle" Key="Joy_RYAxis" />
-		<Inverted Value="1" />
-		<Deadzone Value="0.20750000" />
+		<Binding Device="{NoDevice}" Key="" />
+		<Inverted Value="0" />
+		<Deadzone Value="0.00000000" />
 	</VerticalThrustRaw>
 	<UpThrustButton>
 		<Primary Device="Keyboard" Key="Key_R" />
-		<Secondary Device="SaitekX56Throttle" Key="Joy_24" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_20" />
 	</UpThrustButton>
 	<DownThrustButton>
 		<Primary Device="Keyboard" Key="Key_F" />
-		<Secondary Device="SaitekX56Throttle" Key="Joy_26" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_22" />
 	</DownThrustButton>
 	<AheadThrust>
 		<Binding Device="{NoDevice}" Key="" />
@@ -133,12 +133,12 @@
 	<ThrottleAxis>
 		<Binding Device="SaitekX56Throttle" Key="Joy_XAxis" />
 		<Inverted Value="1" />
-		<Deadzone Value="0.00000000" />
+		<Deadzone Value="0.07500000" />
 	</ThrottleAxis>
-	<ThrottleRange Value="Bindings_ThrottleForewardOnly" />
+	<ThrottleRange Value="" />
 	<ToggleReverseThrottleInput>
 		<Primary Device="{NoDevice}" Key="" />
-		<Secondary Device="SaitekX56Throttle" Key="Joy_32" />
+		<Secondary Device="{NoDevice}" Key="" />
 		<ToggleOn Value="0" />
 	</ToggleReverseThrottleInput>
 	<ForwardKey>
@@ -268,7 +268,7 @@
 	<ToggleFlightAssist>
 		<Primary Device="Keyboard" Key="Key_Z" />
 		<Secondary Device="SaitekX56Throttle" Key="Joy_12" />
-		<ToggleOn Value="1" />
+		<ToggleOn Value="0" />
 	</ToggleFlightAssist>
 	<UseBoostJuice>
 		<Primary Device="Keyboard" Key="Key_Tab" />
@@ -486,7 +486,7 @@
 	</ChargeECM>
 	<EnableRumbleTrigger Value="1" />
 	<EnableMenuGroups Value="0" />
-	<MouseGUI Value="0" />
+	<MouseGUI Value="1" />
 	<WeaponColourToggle>
 		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="{NoDevice}" Key="" />

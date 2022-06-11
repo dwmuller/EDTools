@@ -268,7 +268,7 @@
 	<ToggleFlightAssist>
 		<Primary Device="Keyboard" Key="Key_Z" />
 		<Secondary Device="SaitekX56Throttle" Key="Joy_12" />
-		<ToggleOn Value="0" />
+		<ToggleOn Value="1" />
 	</ToggleFlightAssist>
 	<UseBoostJuice>
 		<Primary Device="Keyboard" Key="Key_Tab" />
@@ -1412,7 +1412,7 @@
 		<Secondary Device="SaitekX56Joystick" Key="Joy_13" />
 	</ExplorationFSSMiniZoomOut>
 	<ExplorationFSSRadioTuningX_Raw>
-		<Binding Device="SaitekX56Throttle" Key="Joy_ZAxis" />
+		<Binding Device="{NoDevice}" Key="" />
 		<Inverted Value="0" />
 		<Deadzone Value="0.00000000" />
 	</ExplorationFSSRadioTuningX_Raw>

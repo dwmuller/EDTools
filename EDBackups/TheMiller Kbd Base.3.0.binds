@@ -816,7 +816,7 @@
 	</BuggyPitchDownButton>
 	<VerticalThrustersButton>
 		<Primary Device="Keyboard" Key="Key_Space" />
-		<Secondary Device="SaitekX56Throttle" Key="Joy_24" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_20" />
 		<ToggleOn Value="0" />
 	</VerticalThrustersButton>
 	<BuggyPrimaryFireButton>
@@ -829,7 +829,7 @@
 	</BuggySecondaryFireButton>
 	<AutoBreakBuggyButton>
 		<Primary Device="Keyboard" Key="Key_X" />
-		<Secondary Device="SaitekX56Throttle" Key="Joy_4" />
+		<Secondary Device="SaitekX56Throttle" Key="Joy_23" />
 		<ToggleOn Value="0" />
 	</AutoBreakBuggyButton>
 	<HeadlightsBuggyButton>

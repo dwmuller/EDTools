@@ -888,9 +888,9 @@
 	<DriveSpeedAxis>
 		<Binding Device="SaitekX56Throttle" Key="Joy_XAxis" />
 		<Inverted Value="1" />
-		<Deadzone Value="0.17050000" />
+		<Deadzone Value="0.08550000" />
 	</DriveSpeedAxis>
-	<BuggyThrottleRange Value="Bindings_BuggyThrottleForewardOnly" />
+	<BuggyThrottleRange Value="" />
 	<BuggyToggleReverseThrottleInput>
 		<Primary Device="{NoDevice}" Key="" />
 		<Secondary Device="SaitekX56Throttle" Key="Joy_1" />
@@ -1436,7 +1436,7 @@
 	</ExplorationFSSDiscoveryScan>
 	<ExplorationFSSQuit>
 		<Primary Device="Keyboard" Key="Key_Backspace" />
-		<Secondary Device="SaitekX56Throttle" Key="Joy_18" />
+		<Secondary Device="SaitekX56Joystick" Key="Joy_7" />
 	</ExplorationFSSQuit>
 	<FSSMouseXMode Value="" />
 	<FSSMouseXDecay Value="1" />
